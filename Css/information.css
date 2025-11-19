@@ -1,0 +1,230 @@
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-bg-dark);
+    box-shadow: var(--shadow-subtle);
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu li a {
+    display: block;
+    color: var(--color-text-light);
+    padding: 18px 25px;
+    text-decoration: none;
+    transition: background var(--transition-fast);
+    font-weight: 500;
+}
+.menu li a:hover {
+    background-color: #333;
+}
+
+.page-header {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.page-header h1 {
+    font-size: 2.5rem;
+}
+.page-header p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+main {
+    background-color: var(--color-bg-body);
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    color: var(--color-primary);
+}
+
+
+.section-projet .card-content {
+    background-color: var(--color-bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-subtle);
+    border-left: 5px solid var(--color-primary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.section-projet p {
+    margin-bottom: 15px;
+}
+
+
+.section-interets {
+    background-color: var(--color-bg-light);
+}
+
+.interets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.interet-card {
+    background-color: var(--color-bg-body);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-subtle);
+    transition: transform var(--transition-fast);
+}
+
+.interet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.interet-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.interet-card h3 {
+    margin-bottom: 5px;
+}
+.interet-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+
+.section-metiers {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.job-card {
+    background-color: var(--color-bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.hacker-ethique-card {
+    border-left: 5px solid var(--color-accent);
+}
+.developpeur-card {
+    border-left: 5px solid var(--color-primary);
+}
+
+.job-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.job-card .subtitle {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+.job-card .description {
+    margin: 15px 0;
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+.competences-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.competences-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+.competences-list li::before {
+    content: "•";
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+.technologies-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.pill {
+    background-color: var(--color-bg-body);
+    color: var(--color-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid #ddd;
+    font-weight: 500;
+}
+
+
+footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 30px 20px;
+}
+.footer-content p {
+    margin: 10px 0;
+}
+.footer-content a {
+    color: var(--color-primary);
+    margin: 0 15px;
+}
+.footer-content a:hover {
+    color: var(--color-text-light);
+}
+.footer-bottom {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    .interets-grid {
+        grid-template-columns: 1fr;
+    }
+    .job-card h3 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .job-card .subtitle {
+        margin-top: 5px;
+    }
+}

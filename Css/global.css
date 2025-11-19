@@ -1,0 +1,48 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+:root {
+
+  --color-primary: #3498db; 
+  --color-accent: #2ecc71;  
+  --color-hover: #2980b9;  
+  
+  
+  --color-bg-light: #ffffff; 
+  --color-bg-body: #f7f7f7; 
+  --color-bg-dark: #1f1f1f; 
+  --color-text-dark: #333333; 
+  --color-text-light: #ffffff; 
+  --color-text-muted: #7f8c8d; 
+  
+
+  --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  --transition-fast: 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
