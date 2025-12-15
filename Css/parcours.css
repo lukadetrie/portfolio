@@ -181,10 +181,10 @@ main {
     background-color: var(--color-bg-light);
 }
 .slam-card {
-    border-left: 5px solid var(--color-primary);
+    border-left: 5px solid var(--color-accent);
 }
 .sisr-card {
-    border-left: 5px solid var(--color-accent);
+    border-left: 5px solid var(--color-primary);
 }
 .option-card h3 {
     font-size: 1.4rem;
@@ -220,7 +220,135 @@ footer {
 }
 
 
+@media (min-width: 993px) {
+    .menu li a {
+        padding: 18px 25px;
+    }
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    .page-header p {
+        font-size: 1.1rem;
+    }
+    .section-container {
+        padding: 60px 20px;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .langages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+    }
+    .timeline-container::after {
+        left: 50%;
+    }
+    .timeline-step {
+        width: 50%;
+        padding: 10px 40px;
+    }
+    .timeline-step:nth-child(even) {
+        left: 50%;
+    }
+    .timeline-step:nth-child(odd) {
+        left: 0;
+    }
+    .timeline-step:nth-child(even) .timeline-dot {
+        left: -9px;
+        right: auto;
+    }
+    .timeline-step:nth-child(odd) .timeline-dot {
+        right: -9px;
+        left: auto;
+    }
+    .sio-options-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .menu li a {
+        padding: 15px 18px;
+        font-size: 1rem;
+    }
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    .page-header p {
+        font-size: 1.05rem;
+    }
+    .section-container {
+        padding: 50px 20px;
+    }
+    .langages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .timeline-container::after {
+        left: 50%;
+    }
+    .timeline-step {
+        width: 50%;
+        padding: 10px 40px;
+    }
+    .timeline-step:nth-child(even) {
+        left: 50%;
+    }
+    .timeline-step:nth-child(odd) {
+        left: 0;
+    }
+    .timeline-step:nth-child(even) .timeline-dot {
+        left: -9px;
+        right: auto;
+    }
+    .timeline-step:nth-child(odd) .timeline-dot {
+        right: -9px;
+        left: auto;
+    }
+    .sio-options-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li a {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    .page-header p {
+        font-size: 1rem;
+    }
+    .section-container {
+        padding: 40px 15px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .langages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .langage-item img {
+        width: 50px;
+        height: 50px;
+    }
+    .langage-item p {
+        font-size: 0.85rem;
+    }
+    
+    /* TIMELINE - Adaptation pour mobile */
+    .timeline-container {
+        padding: 20px 0;
+    }
     .timeline-container::after {
         left: 20px;
     }
@@ -228,14 +356,24 @@ footer {
         width: 100%;
         padding-left: 40px;
         padding-right: 10px;
-        left: 0% !important;
+        left: 0 !important;
     }
     .timeline-dot {
         left: 11px !important;
         right: auto !important;
+        top: 20px;
     }
-
     .sio-options-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .option-card {
+        padding: 20px;
+    }
+    .option-card h3 {
+        font-size: 1.2rem;
+    }
+    .option-card p {
+        font-size: 0.95rem;
     }
 }

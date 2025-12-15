@@ -32,24 +32,25 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: var(--color-bg-light);
+    background: var(--color-bg-dark); 
     padding: 0 20px;
 }
 
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
-    color: var(--color-text-dark);
+    color: var(--color-text-light); 
 }
 .hero-content p {
     font-size: 1.2rem;
-    color: var(--color-text-muted);
+    color: var(--color-text-light); 
     margin-bottom: 40px;
 }
 
+
 .cta-button {
-    display: inline-block;
-    background-color: var(--color-primary);
+   display: inline-block;
+    background-color: var(--color-primary); 
     color: var(--color-text-light);
     padding: 14px 30px;
     border-radius: 50px; 
@@ -58,7 +59,8 @@
     transition: var(--transition-fast);
 }
 .cta-button:hover {
-    background-color: var(--color-hover);
+  background-color: var(--color-hover);
+    color: var(--color-text-light); 
     transform: translateY(-2px);
     text-decoration: none;
 }
@@ -197,24 +199,73 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 993px) {
+    .hero-content {
+        max-width: 800px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .menu li a {
+        padding: 15px 18px; 
+    }
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 3.5rem; 
+    }
+    .hero-section {
+        height: 55vh; 
+    }
+    .slide img {
+        height: 400px; 
+    }
+    .slide .content h3 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .menu li a {
+        padding: 12px 15px; 
+        font-size: 0.95rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem; 
     }
     .hero-content p {
         font-size: 1rem;
     }
-    .slide img {
-        height: 300px;
+    .cta-button {
+        padding: 12px 25px;
     }
-    .slide .content h3 {
-        font-size: 1.8rem;
+    .slide img {
+        height: 250px; 
     }
     .slide .content {
-        width: 90%;
-        padding: 20px;
+        padding: 15px 20px;
+    }
+    .slide .content h3 {
+        font-size: 1.5rem; 
+    }
+    .slide .content p {
+        font-size: 0.9rem;
+    }
+    .controls button {
+        padding: 10px 15px;
+        font-size: 1.5rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
     }
     .contact-cta h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .contact-cta p {
+        font-size: 1rem;
     }
 }
