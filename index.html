@@ -10,7 +10,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    // On désactive le tracking par défaut pour le RGPD
+    // RGPD : Bloqué par défaut
     gtag('consent', 'default', {'analytics_storage': 'denied'});
     gtag('config', 'G-02HSTJPZKP');
   </script>
@@ -36,7 +36,6 @@
   function refuseCookies() {
       document.getElementById('cookie-banner-tp').style.display='none';
       console.log("Consentement refusé : Blocage de Google Analytics.");
-      // On laisse denied
   }
   </script>
 
@@ -98,11 +97,23 @@
       </section>
   </main>
 
-  <footer>
+  <footer style="text-align: center;">
     <div class="footer-content">
       <p>📧 <a href="mailto:lukadetrie@gmail.com">lukadetrie@gmail.com</a></p>
       <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank">LinkedIn</a></p>
     </div>
+
+    <div id="wcb" class="carbonbadge wcb-d"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <style>
+      #wcb.carbonbadge {
+        margin: 15px auto;
+        font-size: 14px;
+        border-radius: 8px;
+        display: inline-block; /* Pour qu'il respecte le text-align center */
+      }
+    </style>
+
     <div class="footer-bottom">
       <p>&copy; 2025 Luka Detrie. Tous droits réservés.</p>
     </div>
