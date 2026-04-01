@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1487c945-3d47-426a-a49d-db7332ae3a42" type="text/javascript" data-blockingmode="auto"></script>
-    <script id="CookieDeclaration" src="https://consent.cookiebot.com/1487c945-3d47-426a-a49d-db7332ae3a42/cd.js" type="text/javascript" async></script>
+     <div id="cookie-banner-tp" style="position:fixed; bottom:0; left:0; width:100%; background:#f1f1f1; color:#333; padding:20px; text-align:center; z-index:9999; border-top:3px solid #0078d4; font-family: sans-serif; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
+    <p style="margin-bottom:15px;">Nous utilisons des cookies pour analyser notre trafic (Google Analytics) conformément au RGPD.</p>
+    <button onclick="acceptCookies()" style="background:#0078d4; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px; margin-right:10px; font-weight:bold;">Tout accepter</button>
+    <button onclick="refuseCookies()" style="background:#666; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px;">Refuser</button>
+</div>
 
-<script async type="text/plain" data-cookieconsent="statistics" src="https://www.googletagmanager.com/gtag/js?id=G-02HSTJPZKP"></script>
-<script type="text/plain" data-cookieconsent="statistics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-02HSTJPZKP');
+<script>
+function acceptCookies() {
+    document.getElementById('cookie-banner-tp').style.display='none';
+    console.log("Consentement accordé : Chargement de Google Analytics...");
+    // Ici, on simule l'activation de GA
+    window.gtag('consent', 'update', {'analytics_storage': 'granted'});
+}
+function refuseCookies() {
+    document.getElementById('cookie-banner-tp').style.display='none';
+    console.log("Consentement refusé : Blocage de Google Analytics.");
+}
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
