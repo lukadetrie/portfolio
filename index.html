@@ -1,101 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-     <div id="cookie-banner-tp" style="position:fixed; bottom:0; left:0; width:100%; background:#f1f1f1; color:#333; padding:20px; text-align:center; z-index:9999; border-top:3px solid #0078d4; font-family: sans-serif; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
-    <p style="margin-bottom:15px;">Nous utilisons des cookies pour analyser notre trafic (Google Analytics) conformément au RGPD.</p>
-    <button onclick="acceptCookies()" style="background:#0078d4; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px; margin-right:10px; font-weight:bold;">Tout accepter</button>
-    <button onclick="refuseCookies()" style="background:#666; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px;">Refuser</button>
-</div>
-
-<script>
-function acceptCookies() {
-    document.getElementById('cookie-banner-tp').style.display='none';
-    console.log("Consentement accordé : Chargement de Google Analytics...");
-    // Ici, on simule l'activation de GA
-    window.gtag('consent', 'update', {'analytics_storage': 'granted'});
-}
-function refuseCookies() {
-    document.getElementById('cookie-banner-tp').style.display='none';
-    console.log("Consentement refusé : Blocage de Google Analytics.");
-}
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Accueil - Luka Detrie | Portfolio</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-02HSTJPZKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // On désactive le tracking par défaut pour le RGPD
+    gtag('consent', 'default', {'analytics_storage': 'denied'});
+    gtag('config', 'G-02HSTJPZKP');
+  </script>
+
   <link rel="stylesheet" href="../Css/global.css" /> 
   <link rel="stylesheet" href="../Css/accueil.css" />
 </head>
+
 <body>
-<nav class="menu sticky">
-  <ul>
-    <li><a href="index.html">Accueil</a></li> 
-    <li><a href="../Information/information.html">Information</a></li> 
-    <li><a href="../Parcours/parcours.html">Parcours</a></li>
-    <li><a href="../Projets/projets.html">Projets</a></li>
-    <li><a href="../Veille/veille.html">Veille Technologique</a></li>
-  </ul>
-</nav>
-
-<header class="hero-section">
-  <div class="hero-content">
-      <h1>Luka Detrie</h1>
-      <a href="../Information/information.html" class="cta-button">Découvrir mon profil</a>
+  <div id="cookie-banner-tp" style="position:fixed; bottom:0; left:0; width:100%; background:#f1f1f1; color:#333; padding:20px; text-align:center; z-index:9999; border-top:3px solid #0078d4; font-family: sans-serif; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
+      <p style="margin-bottom:15px; font-weight: bold;">🍪 Respect de votre vie privée</p>
+      <p style="margin-bottom:15px;">Nous utilisons des cookies pour analyser notre trafic conformément au RGPD.</p>
+      <button onclick="acceptCookies()" style="background:#0078d4; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px; margin-right:10px; font-weight:bold;">Tout accepter</button>
+      <button onclick="refuseCookies()" style="background:#666; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px;">Refuser</button>
   </div>
-</header>
 
-<main>
-    <section class="carousel-section">
-      <h2 class="section-title">Mes domaines</h2>
-      
-      <div class="carousel">
-          <div class="carousel-track" id="carousel-track">
-            <div class="slide">
-              <img src="https://tinyurl.com/swashhme" alt="Développement Logiciel" />
-              <div class="content">
-                <h3>Informatique</h3>
-                <p>Administration Systèmes et Réseaux : Gestion de serveurs , déploiement de machines virtuelles et supervision.</p>
+  <script>
+  function acceptCookies() {
+      document.getElementById('cookie-banner-tp').style.display='none';
+      console.log("Consentement accordé : Activation de Google Analytics.");
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+  }
+  function refuseCookies() {
+      document.getElementById('cookie-banner-tp').style.display='none';
+      console.log("Consentement refusé : Blocage de Google Analytics.");
+      // On laisse denied
+  }
+  </script>
+
+  <nav class="menu sticky">
+    <ul>
+      <li><a href="index.html">Accueil</a></li> 
+      <li><a href="../Information/information.html">Information</a></li> 
+      <li><a href="../Parcours/parcours.html">Parcours</a></li>
+      <li><a href="../Projets/projets.html">Projets</a></li>
+      <li><a href="../Veille/veille.html">Veille Technologique</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero-section">
+    <div class="hero-content">
+        <h1>Luka Detrie</h1>
+        <a href="../Information/information.html" class="cta-button">Découvrir mon profil</a>
+    </div>
+  </header>
+
+  <main>
+      <section class="carousel-section">
+        <h2 class="section-title">Mes domaines</h2>
+        <div class="carousel">
+            <div class="carousel-track" id="carousel-track">
+              <div class="slide">
+                <img src="https://tinyurl.com/swashhme" alt="Développement Logiciel" />
+                <div class="content">
+                  <h3>Informatique</h3>
+                  <p>Administration Systèmes et Réseaux : Gestion de serveurs , déploiement de machines virtuelles et supervision.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="https://tinyurl.com/ykh4xwsz" alt="Cybersécurité" />
+                <div class="content">
+                  <h3>Cybersécurité</h3>
+                  <p>Déploiement et administration de solutions de détection d'intrusion ou de filtration pour la segmentation réseau et la sécurisation des flux de données.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="https://tinyurl.com/368jdrvd" alt="Développement Web " />
+                <div class="content">
+                  <h3>Développement Web</h3>
+                  <p>Maîtrise des technologies Front-end (HTML/CSS/JS) pour l'interface utilisateur et du Back-end pour la logique serveur et la base de données.</p>
+                </div>
               </div>
             </div>
-            <div class="slide">
-              <img src="https://tinyurl.com/ykh4xwsz" alt="Cybersécurité" />
-              <div class="content">
-                <h3>Cybersécurité</h3>
-                <p>Déploiement et administration de solutions de détection d'intrusion ou de filtration pour la segmentation réseau et la sécurisation des flux de données.</p>
-              </div>
+            <div class="controls">
+              <button id="prev" aria-label="Slide précédent">‹</button>
+              <button id="next" aria-label="Slide suivant">›</button>
             </div>
-            <div class="slide">
-              <img src="https://tinyurl.com/368jdrvd" alt="Développement Web " />
-              <div class="content">
-                <h3>Développement Web</h3>
-                <p>Maîtrise des technologies Front-end (HTML/CSS/JS) pour l'interface utilisateur et du Back-end pour la logique serveur et la base de données.</p>
-              </div>
-            </div>
-            </div>
-      
-          <div class="controls">
-            <button id="prev" aria-label="Slide précédent">‹</button>
-            <button id="next" aria-label="Slide suivant">›</button>
-          </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section class="contact-cta">
-        <h2>Un projet ou une opportunité ?</h2>
-        <p>Contactez-moi directement pour discuter de vos besoins.</p>
-        <a href="mailto:lukadetrie@gmail.com" class="cta-button secondary">Me contacter par email</a>
-    </section>
-</main>
+      <section class="contact-cta">
+          <h2>Un projet ou une opportunité ?</h2>
+          <p>Contactez-moi directement pour discuter de vos besoins.</p>
+          <a href="mailto:lukadetrie@gmail.com" class="cta-button secondary">Me contacter par email</a>
+      </section>
+  </main>
 
-<footer>
-  <div class="footer-content">
-    <p>📧 <a href="mailto:lukadetrie@gmail.com">lukadetrie@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank">LinkedIn</a></p>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Luka Detrie. Tous droits réservés.</p>
-  </div>
-</footer>
+  <footer>
+    <div class="footer-content">
+      <p>📧 <a href="mailto:lukadetrie@gmail.com">lukadetrie@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank">LinkedIn</a></p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Luka Detrie. Tous droits réservés.</p>
+    </div>
+  </footer>
 
-<script src="../Js/carousel.js"></script>
+  <script src="../Js/carousel.js"></script>
 </body>
 </html>
