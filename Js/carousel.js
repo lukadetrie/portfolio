@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let index = 0;
   const slideCount = slides.length;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function showSlide(i) {
     track.style.transform = `translateX(-${i * 100}%)`;
@@ -27,15 +28,46 @@ document.addEventListener("DOMContentLoaded", () => {
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
+  function stopAutoScroll() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  }
+
+  function startAutoScroll() {
+    if (!prefersReducedMotion && !intervalId) {
+      intervalId = setInterval(nextSlide, 5000);
+    }
+  }
+
   // Défilement automatique
-  let intervalId = setInterval(nextSlide, 5000);
+  let intervalId = null;
+  startAutoScroll();
 
   // Stopper le défilement au survol
   const carousel = track.closest('.carousel');
   if(carousel) {
-      carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
-      carousel.addEventListener('mouseleave', () => {
-          intervalId = setInterval(nextSlide, 5000);
-      });
+      carousel.addEventListener('mouseenter', stopAutoScroll);
+      carousel.addEventListener('mouseleave', startAutoScroll);
   }
+
+  // Accessibilité clavier
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      nextSlide();
+    }
+    if (event.key === "ArrowLeft") {
+      prevSlide();
+    }
+  });
+
+  // Evite de faire tourner le carousel en onglet inactif
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoScroll();
+    } else {
+      startAutoScroll();
+    }
+  });
 });

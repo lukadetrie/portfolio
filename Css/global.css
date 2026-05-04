@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,27 +8,31 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
+    color: var(--color-text-dark);
+    background: var(--color-bg-body);
 }
 
 :root {
 
-  --color-primary: #3498db; 
-  --color-accent: #2ecc71;  
-  --color-hover: #2980b9;  
+  /* Palette principale */
+  --color-primary: #67b3ff; 
+  --color-accent: #47d18c;  
+  --color-hover: #3f9ef6;  
   
   
-  --color-bg-light: #ffffff; 
-  --color-bg-body: #f7f7f7; 
-  --color-bg-dark: #1f1f1f; 
-  --color-text-dark: #333333; 
+  /* Theme sombre par defaut */
+  --color-bg-light: #121825; 
+  --color-bg-body: #0b101a; 
+  --color-bg-dark: #070b12; 
+  --color-text-dark: #e9eef8; 
   --color-text-light: #ffffff; 
-  --color-text-muted: #7f8c8d; 
+  --color-text-muted: #9ca9c4; 
   
 
-  --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.28);
 
   --transition-fast: 0.3s ease-in-out;
 }
@@ -45,4 +51,10 @@ a {
 a:hover {
     color: var(--color-hover);
     text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(103, 179, 255, 0.55);
+    outline-offset: 3px;
 }

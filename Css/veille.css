@@ -1,3 +1,18 @@
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px 14px;
+    z-index: 1100;
+    border-radius: 0 0 6px 6px;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
 .menu {
     position: sticky;
     top: 0;
@@ -29,7 +44,7 @@
     color: var(--color-text-dark);
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .page-header h1 {
     font-size: 2.5rem;
@@ -76,6 +91,7 @@ main {
     box-shadow: var(--shadow-subtle);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     border-top: 5px solid var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     
     height: 100%;
     display: flex;
@@ -85,7 +101,7 @@ main {
 
 .article-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
 

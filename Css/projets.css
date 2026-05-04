@@ -1,3 +1,18 @@
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px 14px;
+    z-index: 1100;
+    border-radius: 0 0 6px 6px;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
 .menu {
     position: sticky;
     top: 0;
@@ -29,7 +44,7 @@
     color: var(--color-text-dark);
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .page-header h1 {
     font-size: 2.5rem;
@@ -68,17 +83,18 @@ main {
 
 .projet-card {
     background-color: var(--color-bg-light);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--shadow-subtle);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .projet-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
 }
 
 .card-content {
@@ -105,19 +121,19 @@ main {
     margin-top: 10px;
 }
 .pill {
-    background-color: var(--color-bg-body);
+    background-color: rgba(103, 179, 255, 0.12);
     color: var(--color-primary);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(103, 179, 255, 0.35);
     font-weight: 500;
 }
 
 .card-actions {
     padding: 15px 25px;
-    border-top: 1px solid #f0f0f0;
-    background-color: #fcfcfc;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.01);
 }
 
 .cta-link {

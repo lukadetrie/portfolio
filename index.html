@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio de Luka Detrie : BTS SIO SLAM, projets web, cybersécurité et administration systèmes et réseaux." />
+  <meta property="og:title" content="Portfolio de Luka Detrie - BTS SIO SLAM" />
+  <meta property="og:description" content="Découvrez mon profil, mon parcours, mes projets et ma veille technologique." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="Images/LPD.jpg" />
   <title>Accueil - Luka Detrie | Portfolio</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-02HSTJPZKP"></script>
@@ -15,48 +21,89 @@
     gtag('config', 'G-02HSTJPZKP');
   </script>
 
-  <link rel="stylesheet" href="../Css/global.css" /> 
-  <link rel="stylesheet" href="../Css/accueil.css" />
+  <link rel="stylesheet" href="Css/global.css" /> 
+  <link rel="stylesheet" href="Css/accueil.css" />
 </head>
 
 <body>
-  <div id="cookie-banner-tp" style="position:fixed; bottom:0; left:0; width:100%; background:#f1f1f1; color:#333; padding:20px; text-align:center; z-index:9999; border-top:3px solid #0078d4; font-family: sans-serif; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
-      <p style="margin-bottom:15px; font-weight: bold;">🍪 Respect de votre vie privée</p>
-      <p style="margin-bottom:15px;">Nous utilisons des cookies pour analyser notre trafic conformément au RGPD.</p>
-      <button onclick="acceptCookies()" style="background:#0078d4; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px; margin-right:10px; font-weight:bold;">Tout accepter</button>
-      <button onclick="refuseCookies()" style="background:#666; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:4px;">Refuser</button>
+  <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+
+  <div id="cookie-banner-tp" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Gestion des cookies">
+      <p class="cookie-title">Respect de votre vie privée</p>
+      <p>Nous utilisons des cookies pour mesurer l'audience du site, conformément au RGPD.</p>
+      <button id="accept-cookies-btn" class="cookie-btn cookie-btn-accept" type="button">Tout accepter</button>
+      <button id="refuse-cookies-btn" class="cookie-btn cookie-btn-refuse" type="button">Refuser</button>
   </div>
 
   <script>
+  const cookieBanner = document.getElementById('cookie-banner-tp');
+  const cookieChoice = localStorage.getItem('cookie-consent-choice');
+  const acceptBtn = document.getElementById('accept-cookies-btn');
+  const refuseBtn = document.getElementById('refuse-cookies-btn');
+
+  function closeBanner() {
+    cookieBanner.style.display = 'none';
+  }
+
   function acceptCookies() {
-      document.getElementById('cookie-banner-tp').style.display='none';
-      console.log("Consentement accordé : Activation de Google Analytics.");
-      gtag('consent', 'update', {'analytics_storage': 'granted'});
+    localStorage.setItem('cookie-consent-choice', 'accepted');
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+    closeBanner();
   }
+
   function refuseCookies() {
-      document.getElementById('cookie-banner-tp').style.display='none';
-      console.log("Consentement refusé : Blocage de Google Analytics.");
+    localStorage.setItem('cookie-consent-choice', 'refused');
+    closeBanner();
   }
+
+  if (cookieChoice === 'accepted') {
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+    closeBanner();
+  } else if (cookieChoice === 'refused') {
+    closeBanner();
+  }
+
+  acceptBtn.addEventListener('click', acceptCookies);
+  refuseBtn.addEventListener('click', refuseCookies);
   </script>
 
-  <nav class="menu sticky">
+  <nav class="menu sticky" aria-label="Navigation principale">
     <ul>
-      <li><a href="index.html">Accueil</a></li> 
-      <li><a href="../Information/information.html">Information</a></li> 
-      <li><a href="../Parcours/parcours.html">Parcours</a></li>
-      <li><a href="../Projets/projets.html">Projets</a></li>
-      <li><a href="../Veille/veille.html">Veille Technologique</a></li>
+      <li><a href="index.html" aria-current="page">Accueil</a></li> 
+      <li><a href="Information/information.html">Information</a></li> 
+      <li><a href="Parcours/parcours.html">Parcours</a></li>
+      <li><a href="Projets/projets.html">Projets</a></li>
+      <li><a href="Veille/veille.html">Veille Technologique</a></li>
     </ul>
   </nav>
 
   <header class="hero-section">
     <div class="hero-content">
         <h1>Luka Detrie</h1>
-        <a href="../Information/information.html" class="cta-button">Découvrir mon profil</a>
+        <p>Étudiant en BTS SIO option SLAM, passionné par le développement web, la cybersécurité et l'automatisation.</p>
+        <div class="hero-actions">
+          <a href="Information/information.html" class="cta-button">Découvrir mon profil</a>
+          <a href="Projets/projets.html" class="cta-button cta-outline">Voir mes projets</a>
+        </div>
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
+      <section class="highlights-section" aria-label="Points forts">
+        <div class="highlight-card">
+          <h2>Formation</h2>
+          <p>BTS SIO SLAM avec une approche orientée projets et résolution de problèmes.</p>
+        </div>
+        <div class="highlight-card">
+          <h2>Compétences</h2>
+          <p>Développement web, bases de données, administration systèmes et sécurisation des infrastructures.</p>
+        </div>
+        <div class="highlight-card">
+          <h2>Objectif</h2>
+          <p>Contribuer à des projets concrets en entreprise, avec une forte valeur ajoutée technique.</p>
+        </div>
+      </section>
+
       <section class="carousel-section">
         <h2 class="section-title">Mes domaines</h2>
         <div class="carousel">
@@ -100,7 +147,7 @@
   <footer style="text-align: center;">
     <div class="footer-content">
       <p>📧 <a href="mailto:lukadetrie@gmail.com">lukadetrie@gmail.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank">LinkedIn</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </div>
 
     <div id="wcb" class="carbonbadge wcb-d"></div>
@@ -119,6 +166,6 @@
     </div>
   </footer>
 
-  <script src="../Js/carousel.js"></script>
+  <script src="Js/carousel.js"></script>
 </body>
 </html>
