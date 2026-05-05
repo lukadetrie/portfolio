@@ -13,32 +13,6 @@
     left: 10px;
 }
 
-.menu {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: var(--color-bg-dark);
-    box-shadow: var(--shadow-subtle);
-}
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-.menu li a {
-    display: block;
-    color: var(--color-text-light);
-    padding: 18px 25px;
-    text-decoration: none;
-    transition: background var(--transition-fast);
-    font-weight: 500;
-}
-.menu li a:hover {
-    background-color: #333;
-}
-
 .page-header {
     background-color: var(--color-bg-light);
     color: var(--color-text-dark);
@@ -64,6 +38,33 @@ main {
     margin: 0 auto;
     padding: 60px 20px;
 }
+
+.section-overview {
+    padding-bottom: 20px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.overview-card {
+    background-color: var(--color-bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    padding: 20px;
+}
+
+.overview-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.overview-card p {
+    color: var(--color-text-muted);
+}
 .section-title {
     font-size: 2rem;
     margin-bottom: 40px;
@@ -75,6 +76,14 @@ main {
 .section-langages {
     background-color: var(--color-bg-light);
 }
+
+.section-intro {
+    text-align: center;
+    color: var(--color-text-muted);
+    max-width: 760px;
+    margin: -18px auto 30px;
+}
+
 .langages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -83,26 +92,51 @@ main {
 }
 
 .langage-item {
-    padding: 20px 10px;
-    border-radius: 8px;
+    padding: 22px 12px;
+    border-radius: 12px;
     box-shadow: var(--shadow-subtle);
-    background-color: var(--color-bg-body);
+    background-color: #0d1523;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: transform var(--transition-fast);
 }
 .langage-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.35);
+}
+
+.langage-logo {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 12px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(103, 179, 255, 0.2), rgba(71, 209, 140, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 .langage-item img {
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .langage-item p {
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-text-dark);
+}
+
+.niveau {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: rgba(103, 179, 255, 0.12);
+    border: 1px solid rgba(103, 179, 255, 0.35);
+    border-radius: 999px;
+    padding: 4px 10px;
 }
 
 
@@ -161,6 +195,7 @@ main {
     box-shadow: var(--shadow-subtle);
     position: relative;
     border-left: 4px solid var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .timeline-content h3 {
     margin-bottom: 5px;
@@ -194,6 +229,7 @@ main {
     border-radius: 8px;
     box-shadow: var(--shadow-subtle);
     background-color: var(--color-bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .slam-card {
     border-left: 5px solid var(--color-accent);
@@ -236,9 +272,6 @@ footer {
 
 
 @media (min-width: 993px) {
-    .menu li a {
-        padding: 18px 25px;
-    }
     .page-header h1 {
         font-size: 2.5rem;
     }
@@ -284,10 +317,6 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .menu li a {
-        padding: 15px 18px;
-        font-size: 1rem;
-    }
     .page-header h1 {
         font-size: 2.2rem;
     }
@@ -299,6 +328,9 @@ footer {
     }
     .langages-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .overview-grid {
+        grid-template-columns: 1fr;
     }
     .timeline-container::after {
         left: 50%;
@@ -328,14 +360,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu li a {
-        padding: 12px 15px;
-        font-size: 0.95rem;
-    }
     .page-header h1 {
         font-size: 2rem;
     }
@@ -349,12 +373,23 @@ footer {
         font-size: 1.8rem;
         margin-bottom: 30px;
     }
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
     .langages-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
+    .section-intro {
+        margin-bottom: 20px;
+    }
     .langage-item img {
-        width: 50px;
-        height: 50px;
+        width: 36px;
+        height: 36px;
+    }
+    .langage-logo {
+        width: 60px;
+        height: 60px;
     }
     .langage-item p {
         font-size: 0.85rem;

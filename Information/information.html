@@ -12,18 +12,26 @@
     <title>Information - Luka Detrie | Profil</title>
     <link rel="icon" type="image/svg+xml" href="../Images/favicon.svg" />
     <link rel="stylesheet" href="../Css/global.css" />
+    <link rel="stylesheet" href="../Css/nav.css" />
     <link rel="stylesheet" href="../Css/information.css" />
 </head>
 <body>
 <a href="#contenu" class="skip-link">Aller au contenu principal</a>
 <nav class="menu sticky" aria-label="Navigation principale">
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="information.html" aria-current="page">Information</a></li>
-    <li><a href="../Parcours/parcours.html">Parcours</a></li>
-    <li><a href="../Projets/projets.html">Projets</a></li>
-    <li><a href="../Veille/veille.html">Veille Technologique</a></li>
-  </ul>
+  <div class="menu-bar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
+      Menu
+    </button>
+  </div>
+  <div id="menu-panel" class="menu-panel">
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="information.html" aria-current="page">Information</a></li>
+      <li><a href="../Parcours/parcours.html">Parcours</a></li>
+      <li><a href="../Projets/projets.html">Projets</a></li>
+      <li><a href="../Veille/veille.html">Veille Technologique</a></li>
+    </ul>
+  </div>
 </nav>
 
   <header class="page-header">
@@ -32,6 +40,23 @@
   </header>
 
   <main id="contenu">
+    <section class="section-container section-profile-intro">
+      <div class="profile-intro-grid">
+        <article class="profile-intro-card">
+          <h2>Profil rapide</h2>
+          <ul class="quick-list">
+            <li><strong>Formation :</strong> BTS SIO option SLAM</li>
+            <li><strong>Objectif :</strong> Développeur orienté solutions métier</li>
+            <li><strong>Domaines :</strong> Web, automatisation, cybersécurité</li>
+          </ul>
+        </article>
+        <article class="profile-intro-card">
+          <h2>Valeur ajoutée</h2>
+          <p>Je combine rigueur technique, esprit d'analyse et approche orientée besoins utilisateurs pour concevoir des solutions fiables et évolutives.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section-container section-projet">
         <h2 class="section-title">Projet professionnel</h2>
         <div class="card-content">
@@ -51,36 +76,37 @@
 
     <section class="section-container section-interets">
       <h2 class="section-title">Centres d’intérêt</h2>
+      <p class="section-intro">Des activités personnelles qui renforcent mes qualités utiles en développement logiciel : discipline, analyse, créativité et communication.</p>
       <div class="interets-grid">
         <div class="card interet-card">
-          <div class="icon">🏀</div>
-          <h3>Sport</h3>
-          <p>Football, MMA, JJB, vélo de course et descente.</p>
+          <div class="icon">Activité physique</div>
+          <h3>Sport & discipline</h3>
+          <p>La pratique régulière du sport développe ma rigueur, ma persévérance et ma capacité à atteindre des objectifs.</p>
         </div>
 
         <div class="card interet-card">
-          <div class="icon">🎬</div>
-          <h3>Films & animés</h3>
-          <p>Passionné par le cinéma et l'animation.</p>
+          <div class="icon">Culture visuelle</div>
+          <h3>Cinéma & narration</h3>
+          <p>L’analyse des récits et de la mise en scène nourrit ma réflexion sur l’expérience utilisateur et la clarté des interfaces.</p>
         </div>
 
 
         <div class="card interet-card">
-          <div class="icon">✈️</div>
-          <h3>Voyages</h3>
-          <p>Découverte de nouvelles cultures et paysages.</p>
+          <div class="icon">Ouverture</div>
+          <h3>Voyages & adaptation</h3>
+          <p>Découvrir de nouveaux environnements m’aide à mieux collaborer avec des profils variés et à m’adapter rapidement.</p>
         </div>
 
         <div class="card interet-card">
-          <div class="icon">🎮</div>
-          <h3> Jeux vidéo </h3>
-          <p>Passionné par les jeux vidéo.</p>
+          <div class="icon">Logique</div>
+          <h3>Jeux vidéo & stratégie</h3>
+          <p>Les jeux orientés stratégie renforcent mon sens de l’analyse, la résolution de problèmes et la prise de décision.</p>
         </div>
 
         <div class="card interet-card">
-            <div class="icon">🎧</div>
-            <h3>Musique</h3>
-            <p>J’aime écouter différents styles de musiques.</p>
+            <div class="icon">Concentration</div>
+            <h3>Musique & focus</h3>
+            <p>La musique améliore ma concentration lors des phases de développement et favorise un travail régulier et efficace.</p>
           </div>
       </div>
     </section>
@@ -88,38 +114,40 @@
     <section class="section-container section-metiers">
       <h2 class="section-title">Présentation des métiers</h2>
 
-      <div class="job-card hacker-ethique-card">
-        <h3>Hacker Éthique <span class="subtitle">Cybersécurité & Audit</span></h3>
-        <p class="description">
-          Un <strong>hacker éthique</strong> protège les systèmes informatiques en détectant les failles de sécurité avant les pirates.
-        </p>
-        <ul class="competences-list">
-          <li>Pentest & tests d’intrusion</li>
-          <li>Analyse des vulnérabilités</li>
-          <li>Sécurisation des réseaux et systèmes</li>
-        </ul>
-        <div class="technologies-pills">
-            <span class="pill">Kali Linux</span>
-            <span class="pill">Wireshark</span>
-            <span class="pill">Sécurité Réseau</span>
+      <div class="jobs-grid">
+        <div class="job-card hacker-ethique-card">
+          <h3>Hacker Éthique <span class="subtitle">Cybersécurité & Audit</span></h3>
+          <p class="description">
+            Un <strong>hacker éthique</strong> protège les systèmes informatiques en détectant les failles de sécurité avant les pirates.
+          </p>
+          <ul class="competences-list">
+            <li>Pentest & tests d’intrusion</li>
+            <li>Analyse des vulnérabilités</li>
+            <li>Sécurisation des réseaux et systèmes</li>
+          </ul>
+          <div class="technologies-pills">
+              <span class="pill">Kali Linux</span>
+              <span class="pill">Wireshark</span>
+              <span class="pill">Sécurité Réseau</span>
+          </div>
         </div>
-      </div>
 
-      <div class="job-card developpeur-card">
-        <h3>Développeur<span class="subtitle">Création & Innovation</span></h3>
-        <p class="description">
-          Le <strong>développeur</strong> conçoit des applications, sites web ou logiciels, en résolvant des problématiques complexes.
-        </p>
-        <ul class="competences-list">
-          <li>Développement web et mobile</li>
-          <li>Interfaces utilisateurs (UI/UX)</li>
-          <li>Travail en équipe agile (Scrum/Kanban)</li>
-        </ul>
-        <div class="technologies-pills">
-          <span class="pill">Python</span>
-          <span class="pill">HTML/CSS/JS</span>
-          <span class="pill">SQL</span>
-          <span class="pill">Frameworks JS</span>
+        <div class="job-card developpeur-card">
+          <h3>Développeur <span class="subtitle">Création & Innovation</span></h3>
+          <p class="description">
+            Le <strong>développeur</strong> conçoit des applications, sites web ou logiciels, en résolvant des problématiques complexes.
+          </p>
+          <ul class="competences-list">
+            <li>Développement web et mobile</li>
+            <li>Interfaces utilisateurs (UI/UX)</li>
+            <li>Travail en équipe agile (Scrum/Kanban)</li>
+          </ul>
+          <div class="technologies-pills">
+            <span class="pill">Python</span>
+            <span class="pill">HTML/CSS/JS</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Frameworks JS</span>
+          </div>
         </div>
       </div>
     </section>
@@ -131,8 +159,9 @@
       <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Luka Detrie. Tous droits réservés.</p>
+      <p>&copy; 2026 Luka Detrie. Tous droits réservés.</p>
     </div>
   </footer>
+  <script src="../Js/nav.js"></script>
 </body>
 </html>

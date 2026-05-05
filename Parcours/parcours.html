@@ -21,18 +21,26 @@
   <title>Parcours - Luka Detrie | Formation</title>
   <link rel="icon" type="image/svg+xml" href="../Images/favicon.svg" />
   <link rel="stylesheet" href="../Css/global.css" />
+  <link rel="stylesheet" href="../Css/nav.css" />
   <link rel="stylesheet" href="../Css/parcours.css" />
 </head>
 <body>
  <a href="#contenu" class="skip-link">Aller au contenu principal</a>
  <nav class="menu sticky" aria-label="Navigation principale">
-  <ul>
-    <li><a href="../index.html">Accueil</a></li> 
-    <li><a href="../Information/information.html">Information</a></li> 
-    <li><a href="parcours.html" aria-current="page">Parcours</a></li>
-    <li><a href="../Projets/projets.html">Projets</a></li>
-    <li><a href="../Veille/veille.html">Veille Technologique</a></li>
-  </ul>
+  <div class="menu-bar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
+      Menu
+    </button>
+  </div>
+  <div id="menu-panel" class="menu-panel">
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../Information/information.html">Information</a></li>
+      <li><a href="parcours.html" aria-current="page">Parcours</a></li>
+      <li><a href="../Projets/projets.html">Projets</a></li>
+      <li><a href="../Veille/veille.html">Veille Technologique</a></li>
+    </ul>
+  </div>
 </nav>
 
   <header class="page-header">
@@ -41,15 +49,52 @@
   </header>
 
   <main id="contenu">
+    <section class="section-container section-overview">
+      <h2 class="section-title">Vue d'ensemble</h2>
+      <div class="overview-grid">
+        <article class="overview-card">
+          <h3>Depuis 2025</h3>
+          <p>Formation BTS SIO option SLAM orientée conception et développement d'applications.</p>
+        </article>
+        <article class="overview-card">
+          <h3>Stack travaillée</h3>
+          <p>JavaScript, Python, SQL, PHP, HTML et CSS avec une approche projet.</p>
+        </article>
+        <article class="overview-card">
+          <h3>Objectif pro</h3>
+          <p>Développer des solutions métiers robustes, maintenables et utiles en entreprise.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section-container section-langages">
       <h2 class="section-title">Langages et Technologies</h2>
+      <p class="section-intro">Technologies utilisées dans ma formation SLAM, avec un niveau estimé selon mes réalisations en cours et mes projets pratiques.</p>
       <div class="langages-grid">
-          <div class="langage-item card"><img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png" alt="JavaScript"/><p>JavaScript</p></div>
-          <div class="langage-item card"><img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png" alt="Python"/><p>Python</p></div>
-          <div class="langage-item card"><img src="https://w7.pngwing.com/pngs/525/959/png-transparent-microsoft-azure-sql-database-microsoft-sql-server-cloud-computing-text-trademark-logo.png" alt="SQL"/><p>SQL</p></div>
-          <div class="langage-item card"><img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/php/php.png" alt="PHP"/><p>PHP</p></div>
-          <div class="langage-item card"><img src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" alt="HTML"/><p>HTML</p></div>
-          <div class="langage-item card"><img src="https://img.icons8.com/?size=512&id=21278&format=png" alt="CSS"/><p>CSS</p></div>
+          <div class="langage-item card">
+            <div class="langage-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/></div>
+            <p>JavaScript</p><span class="niveau">Intermédiaire</span>
+          </div>
+          <div class="langage-item card">
+            <div class="langage-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"/></div>
+            <p>Python</p><span class="niveau">Intermédiaire</span>
+          </div>
+          <div class="langage-item card">
+            <div class="langage-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL"/></div>
+            <p>SQL</p><span class="niveau">Intermédiaire</span>
+          </div>
+          <div class="langage-item card">
+            <div class="langage-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"/></div>
+            <p>PHP</p><span class="niveau">Base solide</span>
+          </div>
+          <div class="langage-item card">
+            <div class="langage-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"/></div>
+            <p>HTML</p><span class="niveau">Avancé</span>
+          </div>
+          <div class="langage-item card">
+            <div class="langage-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS"/></div>
+            <p>CSS</p><span class="niveau">Avancé</span>
+          </div>
           </div>
     </section>
 
@@ -81,7 +126,7 @@
           <div class="timeline-content card current">
             <h3>BTS SIO</h3>
             <p>Dijon (Option SLAM)</p>
-            <span class="timeline-date">Depuis 2024</span>
+            <span class="timeline-date">Depuis 2025</span>
           </div>
         </div>
 
@@ -109,9 +154,10 @@
       <p>🔗 <a href="https://www.linkedin.com/in/luka-detrie-2781992b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Luka Detrie. Tous droits réservés.</p>
+      <p>&copy; 2026 Luka Detrie. Tous droits réservés.</p>
     </div>
   </footer>
 
+  <script src="../Js/nav.js"></script>
   </body>
 </html>
